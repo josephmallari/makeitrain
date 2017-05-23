@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-  <script src="jquery.transit.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit.min.js"></script>
 </head>
 
 <style>
@@ -36,7 +36,7 @@ function makeDiv() {
     const divheight = 140;
     const posx = (Math.random() * ($(document).width() - divwidth)).toFixed();
     const posy = (Math.random() * ($(document).height() - divheight)).toFixed();
-		const image = 'money.png';
+		const image = 'http://www.slate.com/content/dam/slate/blogs/business_insider/2013/10/08/130810_bi_100billfront.jpg';
 
     $newdiv = $('<div/>').css({
         'width':divwidth +'px',
@@ -52,7 +52,7 @@ function makeDiv() {
         'box-shadow': '2px 4px 21px -5px rgba(0,0,0,0.75)',
     })
 
-		.appendTo( 'body' ).transition({
+		.appendTo('body').transition({
       left: posx +'px',
       top: posy +'px',
       rotate: angle +'deg',
