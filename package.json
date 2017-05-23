@@ -9,6 +9,7 @@
   "author": "Joseph Mallari",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.15.3",
     "fs": "0.0.1-security",
     "http": "0.0.0",
     "vim": "^0.1.0"

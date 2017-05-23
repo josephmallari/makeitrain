@@ -1,17 +1,13 @@
-const http = require('http');
-const fs = require('fs');
+const express = require('express');
+const app = express();
 
-fs.readFile('./index.html', 'utf8', (err, html) => {
-	if (err) {
-		throw err;
-	}
+app.use(express.static('public'));
 
-	http.createServer((request, response) => {
-		response.writeHeader(200, { "Content-Type": "text/html" });
-		response.write(html);
-		response.end();
-
-	}).listen(8000);
-
-	console.log('listening on port 8000');
+app.get('/', (req, res) => {
+	res.send('yo');
 });
+
+app.listen(3000, () => {
+	console.log('listening to port 3000');	
+});
+
