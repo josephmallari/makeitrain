@@ -4,7 +4,7 @@ const app = express();
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-	res.send('yo');
+	res.send('/public/index.html');
 });
 
 app.listen(process.env.PORT || 3000, () => {
