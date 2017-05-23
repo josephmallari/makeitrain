@@ -3,8 +3,10 @@ const app = express();
 
 app.use(express.static(__dirname + '/public'));
 
+app.set('view engine', 'ejs');
+
 app.get('/', (req, res) => {
-	res.sendfile(__dirname + '/public/index.html'); 
+	res.render('index');
 });
 
 app.get('/yo', (req, res) => {
